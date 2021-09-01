@@ -16,7 +16,7 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.setHidesBackButton(true, animated: true)
+        navigationItem.setHidesBackButton(true, animated: true)
         showResult()
 
     }
@@ -35,16 +35,16 @@ class ResultViewController: UIViewController {
         
         switch animal {
         case .dog:
-            titleLabel.text = "Вы \(Animal.dog.rawValue)"
+            titleLabel.text = "Вы - \(Animal.dog.rawValue)"
             descriptionLabel.text = Animal.dog.definition
         case .cat:
-            titleLabel.text = "Вы \(Animal.cat.rawValue)"
+            titleLabel.text = "Вы - \(Animal.cat.rawValue)"
             descriptionLabel.text = Animal.cat.definition
         case .rabbit:
-            titleLabel.text = "Вы \(Animal.rabbit.rawValue)"
+            titleLabel.text = "Вы - \(Animal.rabbit.rawValue)"
             descriptionLabel.text = Animal.rabbit.definition
         case .turtle:
-            titleLabel.text = "Вы \(Animal.turtle.rawValue)"
+            titleLabel.text = "Вы - \(Animal.turtle.rawValue)"
             descriptionLabel.text = Animal.turtle.definition
         }
     }
