@@ -22,7 +22,7 @@ class ResultViewController: UIViewController {
     }
 
     private func getResult() -> Animal? {
-         answers
+        answers
             .reduce(into: [:]) { counts, number in
                 counts[number.animal, default: 0] += 1 }
             .sorted { $0.1 > $1.1 }
