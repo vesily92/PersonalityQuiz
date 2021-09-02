@@ -22,12 +22,11 @@ class ResultViewController: UIViewController {
     }
 
     private func getResult() -> Animal? {
-        let animal = answers
+         answers
             .reduce(into: [:]) { counts, number in
                 counts[number.animal, default: 0] += 1 }
             .sorted { $0.1 > $1.1 }
             .first?.key
-        return animal
     }
         
     private func showResult() {
